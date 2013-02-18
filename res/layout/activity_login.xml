@@ -37,7 +37,7 @@
         <LinearLayout
             android:id="@+id/footer"
             android:layout_width="fill_parent"
-            android:layout_height="90dip"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:background="@layout/footer_repeat" >
         </LinearLayout> <!-- Footer Ends -->
@@ -54,33 +54,38 @@
             android:padding="10dip" >
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/usernametext"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_marginBottom="20dip"
                 android:layout_marginTop="5dip"
                 android:layout_weight="1"
                 android:hint="@string/username"
-                android:radius="5dp"
-                android:singleLine="true" />
+                android:inputType="text"
+                android:singleLine="true"
+                android:typeface="monospace" />
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/passwordtext"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="5dip"
                 android:layout_weight="1"
                 android:hint="@string/password"
                 android:inputType="textPassword"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:typeface="monospace" />
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/loginbutton"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="10dip"
                 android:layout_weight="1"
-                android:text="@string/login" />
+                android:onClick="requestLogin"
+                android:text="@string/login"
+                android:typeface="monospace" />
+
         </LinearLayout>
 
         <!-- Login Form Ends -->

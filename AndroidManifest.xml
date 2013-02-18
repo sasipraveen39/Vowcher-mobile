@@ -19,8 +19,31 @@
             android:windowSoftInputMode="adjustResize|stateVisible" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.vowcher.mobile_app.DisplayMessageActivity"
+            android:label="@string/title_activity_display_message" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vowcher.mobile_app.LoginActivity" />
+        </activity>
+        <activity
+            android:name="com.vowcher.mobile_app.VoucherAdd"
+            android:label="@string/title_activity_voucher_add" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vowcher.mobile_app.LoginActivity" />
+        </activity>
+       <activity
+            android:name="com.vowcher.mobile_app.Datepick"
+            android:label="@string/title_activity_datepick"
+            android:theme="@android:style/Theme.Panel">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vowcher.mobile_app.VoucherAdd" />
         </activity>
     </application>
 
