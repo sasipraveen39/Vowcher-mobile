@@ -17,5 +17,6 @@
     <string name="date">Date</string>
     <string name="desc">Enter description&#8230;</string>
     <string name="receipt">Upload Receipt&#8230;</string>
+    <string name="chooser_title">Select action</string>
 
 </resources>

@@ -11,16 +11,18 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int logo=0x7f020001;
-        public static final int repeat_bg=0x7f020002;
+        public static final int calendar=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int logo=0x7f020002;
+        public static final int receipt=0x7f020003;
+        public static final int repeat_bg=0x7f020004;
     }
     public static final class id {
         public static final int VoucherTypespinner=0x7f07000a;
         public static final int amounttext=0x7f070008;
         public static final int content=0x7f070006;
         public static final int datePicker=0x7f070000;
-        public static final int datebutton=0x7f07000d;
+        public static final int datebtn=0x7f07000d;
         public static final int datelayout=0x7f07000b;
         public static final int datetext=0x7f07000c;
         public static final int descriptiontext=0x7f07000e;
@@ -30,7 +32,7 @@ public final class R {
         public static final int menu_forgot_password=0x7f070011;
         public static final int menu_settings=0x7f070010;
         public static final int passwordtext=0x7f070004;
-        public static final int receiptbutton=0x7f07000f;
+        public static final int receiptbtn=0x7f07000f;
         public static final int textView1=0x7f070009;
         public static final int titletext=0x7f070007;
         public static final int usernametext=0x7f070003;
@@ -51,27 +53,28 @@ public final class R {
     }
     public static final class string {
         public static final int Voucher_type=0x7f040007;
-        public static final int action_sign_in_register=0x7f040012;
-        public static final int action_sign_in_short=0x7f040013;
+        public static final int action_sign_in_register=0x7f040013;
+        public static final int action_sign_in_short=0x7f040014;
         public static final int amount=0x7f040006;
         public static final int app_name=0x7f040000;
+        public static final int chooser_title=0x7f040010;
         public static final int date=0x7f04000d;
         public static final int desc=0x7f04000e;
-        public static final int error_field_required=0x7f040019;
-        public static final int error_incorrect_password=0x7f040018;
-        public static final int error_invalid_email=0x7f040016;
-        public static final int error_invalid_password=0x7f040017;
+        public static final int error_field_required=0x7f04001a;
+        public static final int error_incorrect_password=0x7f040019;
+        public static final int error_invalid_email=0x7f040017;
+        public static final int error_invalid_password=0x7f040018;
         public static final int hello_world=0x7f040008;
         public static final int imgdesc=0x7f040004;
         public static final int login=0x7f040003;
-        public static final int login_progress_signing_in=0x7f040015;
-        public static final int menu_forgot_password=0x7f040014;
+        public static final int login_progress_signing_in=0x7f040016;
+        public static final int menu_forgot_password=0x7f040015;
         public static final int menu_settings=0x7f040009;
         public static final int password=0x7f040002;
         /**  Strings related to login 
          */
-        public static final int prompt_email=0x7f040010;
-        public static final int prompt_password=0x7f040011;
+        public static final int prompt_email=0x7f040011;
+        public static final int prompt_password=0x7f040012;
         public static final int receipt=0x7f04000f;
         public static final int title=0x7f040005;
         public static final int title_activity_datepick=0x7f04000c;

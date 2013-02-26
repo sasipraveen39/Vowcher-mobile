@@ -70,7 +70,7 @@
                     android:id="@+id/datetext"
                     style="@style/primestyle"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="fill_parent"
                     android:layout_weight="4"
                     android:focusable="false"
                     android:focusableInTouchMode="false"
@@ -78,14 +78,13 @@
                     android:inputType="date"
                     android:onClick="showDatePicker" />
 
-                <Button
-                    android:id="@+id/datebutton"
-                    style="@style/primestyle"
+                  <ImageButton
+                    android:id="@+id/datebtn"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" 
-                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/date"
                     android:onClick="showDatePicker"
-                    android:text="@string/date" />
+                    android:src="@drawable/calendar" /> 
             </LinearLayout>
 
             <EditText
@@ -94,12 +93,14 @@
                 android:hint="@string/desc"
                 android:inputType="textMultiLine" />
 
-            <Button
-                android:id="@+id/receiptbutton"
+            <ImageButton
+                android:id="@+id/receiptbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/primestyle"
-                android:text="@string/receipt" />
+                android:contentDescription="@string/receipt"
+                android:src="@drawable/receipt" 
+                android:onClick="getImage"/>
+
         </LinearLayout>
     </RelativeLayout>
 
