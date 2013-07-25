@@ -39,14 +39,15 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@layout/footer_repeat" >
+            android:background="@layout/footer_repeat"
+            android:orientation="vertical" >
         </LinearLayout> <!-- Footer Ends -->
 
 
         <!-- Login Form -->
 
         <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/header"
@@ -56,6 +57,7 @@
             <EditText
                 android:id="@+id/usernametext"
                 style="@style/primestyle"
+                android:fontFamily="normal"
                 android:hint="@string/username"
                 android:inputType="text"
                 android:singleLine="true" />
@@ -63,23 +65,37 @@
             <EditText
                 android:id="@+id/passwordtext"
                 style="@style/primestyle"
+                android:fontFamily="normal"
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:singleLine="true" />
 
             <Button
                 android:id="@+id/loginbutton"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
+                android:layout_width="138dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
-                android:layout_weight="1"
+                android:background="@drawable/gradient_button"
+                android:fontFamily="normal"
                 android:onClick="requestLogin"
                 android:text="@string/login"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
                 android:typeface="monospace" />
 
         </LinearLayout>
 
         <!-- Login Form Ends -->
+
+        <TextView
+            android:id="@+id/errorMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_marginLeft="16dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#990000" />
 
     </RelativeLayout>
 

@@ -37,14 +37,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.vowcher.mobile_app.LoginActivity" />
         </activity>
-       <activity
+        <activity
             android:name="com.vowcher.mobile_app.Datepick"
             android:label="@string/title_activity_datepick"
-            android:theme="@android:style/Theme.Panel">
+            android:theme="@android:style/Theme.Panel" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.vowcher.mobile_app.VoucherAdd" />
         </activity>
+        <activity
+            android:name="com.vowcher.mobile_app.DashboardActivity"
+            android:label="@string/title_activity_dashboard" >
+        </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
