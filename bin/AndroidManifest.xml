@@ -49,6 +49,10 @@
             android:name="com.vowcher.mobile_app.DashboardActivity"
             android:label="@string/title_activity_dashboard" >
         </activity>
+        <activity
+            android:name="com.vowcher.mobile_app.ListElement"
+            android:label="@string/title_activity_list_element" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

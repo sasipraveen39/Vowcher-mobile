@@ -21,26 +21,33 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int border_bottom=0x7f020000;
-        public static final int calendar=0x7f020001;
+        public static final int calendar=0x7f020000;
+        public static final int error=0x7f020001;
         public static final int gradient_button=0x7f020002;
         public static final int ic_launcher=0x7f020003;
-        public static final int logo=0x7f020004;
-        public static final int receipt=0x7f020005;
-        public static final int repeat_bg=0x7f020006;
+        public static final int info=0x7f020004;
+        public static final int logo=0x7f020005;
+        public static final int receipt=0x7f020006;
+        public static final int repeat_bg=0x7f020007;
+        public static final int success=0x7f020008;
+        public static final int warning=0x7f020009;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000b;
+        public static final int action_settings=0x7f08000f;
         public static final int content=0x7f080000;
         public static final int datelayout=0x7f080001;
-        public static final int errorMsg=0x7f080009;
-        public static final int footer=0x7f080004;
+        public static final int errorMsg=0x7f08000a;
+        public static final int footer=0x7f080005;
         public static final int header=0x7f080002;
-        public static final int linearLayout1=0x7f080005;
-        public static final int loginbutton=0x7f080008;
-        public static final int menu_forgot_password=0x7f08000a;
-        public static final int passwordtext=0x7f080007;
-        public static final int usernametext=0x7f080006;
+        public static final int linearLayout1=0x7f080006;
+        public static final int loginbutton=0x7f080009;
+        public static final int menu_forgot_password=0x7f08000e;
+        public static final int notifIcon=0x7f08000b;
+        public static final int notifList=0x7f080004;
+        public static final int notifMsg=0x7f08000c;
+        public static final int passwordtext=0x7f080008;
+        public static final int timeUpdate=0x7f08000d;
+        public static final int usernametext=0x7f080007;
         public static final int welcomeText=0x7f080003;
     }
     public static final class layout {
@@ -48,41 +55,44 @@ public final class R {
         public static final int activity_login=0x7f030001;
         public static final int footer_repeat=0x7f030002;
         public static final int header_gradient=0x7f030003;
+        public static final int list_element=0x7f030004;
     }
     public static final class menu {
         public static final int activity_login=0x7f070000;
         public static final int dashboard=0x7f070001;
+        public static final int list_element=0x7f070002;
     }
     public static final class string {
         public static final int Voucher_type=0x7f050007;
         public static final int action_settings=0x7f050012;
-        public static final int action_sign_in_register=0x7f050015;
-        public static final int action_sign_in_short=0x7f050016;
+        public static final int action_sign_in_register=0x7f050016;
+        public static final int action_sign_in_short=0x7f050017;
         public static final int amount=0x7f050006;
         public static final int app_name=0x7f050000;
         public static final int chooser_title=0x7f050010;
         public static final int date=0x7f05000d;
         public static final int desc=0x7f05000e;
-        public static final int error_field_required=0x7f05001c;
-        public static final int error_incorrect_password=0x7f05001b;
-        public static final int error_invalid_email=0x7f050019;
-        public static final int error_invalid_password=0x7f05001a;
+        public static final int error_field_required=0x7f05001d;
+        public static final int error_incorrect_password=0x7f05001c;
+        public static final int error_invalid_email=0x7f05001a;
+        public static final int error_invalid_password=0x7f05001b;
         public static final int hello_world=0x7f050008;
         public static final int imgdesc=0x7f050004;
         public static final int login=0x7f050003;
-        public static final int login_progress_signing_in=0x7f050018;
-        public static final int menu_forgot_password=0x7f050017;
+        public static final int login_progress_signing_in=0x7f050019;
+        public static final int menu_forgot_password=0x7f050018;
         public static final int menu_settings=0x7f050009;
         public static final int password=0x7f050002;
         /**  Strings related to login 
          */
-        public static final int prompt_email=0x7f050013;
-        public static final int prompt_password=0x7f050014;
+        public static final int prompt_email=0x7f050014;
+        public static final int prompt_password=0x7f050015;
         public static final int receipt=0x7f05000f;
         public static final int title=0x7f050005;
         public static final int title_activity_dashboard=0x7f050011;
         public static final int title_activity_datepick=0x7f05000c;
         public static final int title_activity_display_message=0x7f05000a;
+        public static final int title_activity_list_element=0x7f050013;
         public static final int title_activity_voucher_add=0x7f05000b;
         public static final int username=0x7f050001;
     }
