@@ -18,13 +18,18 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
 public class DashboardActivity extends Activity {
-	
+	Context context=this;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -55,7 +60,6 @@ public class DashboardActivity extends Activity {
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
 	private class FetchNotificationTask extends AsyncTask<String, Void, String> {
@@ -90,7 +94,33 @@ public class DashboardActivity extends Activity {
 	        	notif += line;
 	        }
 	        return notif;
-		}
+		}	
+	}
+	
+	public void signout(View v){
+		AlertDialog.Builder	 alertDialogBuilder = new AlertDialog.Builder(context);
+        
+        alertDialogBuilder.setTitle("Vowcher");
+        alertDialogBuilder
+        		.setMessage("Are you sure you want to exit Vowcher?")
+        		.setCancelable(false)
+        		.setPositiveButton("Yes",new DialogInterface.OnClickListener(){
+        			public void onClick(DialogInterface dialog,int id){
+        				GlobalVars.userId = "";
+        				GlobalVars.userFullName = "";
+        				GlobalVars.secureId = "";
+        				Intent intent = new Intent(context, LoginActivity.class);
+        			    startActivity(intent);
+        			}
+        		})
+        		.setNegativeButton("No",new DialogInterface.OnClickListener(){
+        			public void onClick(DialogInterface dialog,int id){
+        				
+        			}
+        		});
+        
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
 	}
 }
 
