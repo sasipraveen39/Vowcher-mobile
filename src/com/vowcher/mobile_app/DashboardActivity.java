@@ -78,7 +78,7 @@ public class DashboardActivity extends Activity {
 		
 		private String postData() throws ClientProtocolException, IOException {
 		    HttpClient httpclient = new DefaultHttpClient();
-		    HttpPost httppost = new HttpPost("http://10.0.2.2:8080/expense/server/notification.jsp");
+		    HttpPost httppost = new HttpPost("http://"+GlobalVars.ipAddress+":8080/expense/server/notification.jsp");
 		    
 	        List<BasicNameValuePair> nameValuePairs = new ArrayList<BasicNameValuePair>(2);
 	        nameValuePairs.add(new BasicNameValuePair("username", GlobalVars.userId));
@@ -102,7 +102,7 @@ public class DashboardActivity extends Activity {
         
         alertDialogBuilder.setTitle("Vowcher");
         alertDialogBuilder
-        		.setMessage("Are you sure you want to exit Vowcher?")
+        		.setMessage("Are you sure you want to signout?")
         		.setCancelable(false)
         		.setPositiveButton("Yes",new DialogInterface.OnClickListener(){
         			public void onClick(DialogInterface dialog,int id){

@@ -4,4 +4,5 @@ public class GlobalVars {
 	public static String userId;
 	public static String userFullName;
 	public static String secureId;
+	public static String ipAddress="192.168.1.15";
 }

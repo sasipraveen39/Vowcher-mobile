@@ -54,7 +54,7 @@ public class LoginActivity  extends Activity {
 		
 		private String postData(String username,String password) throws ClientProtocolException, IOException {
 		    HttpClient httpclient = new DefaultHttpClient();
-		    HttpPost httppost = new HttpPost("http://10.0.2.2:8080/expense/server/login.jsp");
+		    HttpPost httppost = new HttpPost("http://"+GlobalVars.ipAddress+":8080/expense/server/login.jsp");
 		    
 	        List<BasicNameValuePair> nameValuePairs = new ArrayList<BasicNameValuePair>(2);
 	        nameValuePairs.add(new BasicNameValuePair("username", username));

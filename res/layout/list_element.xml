@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="5dp" >
@@ -18,7 +18,7 @@
         android:id="@+id/notifMsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="-10dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="10dp"
         android:text="Medium Text"
@@ -30,11 +30,11 @@
         android:id="@+id/timeUpdate"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_marginLeft="-108dp"
+        android:layout_alignParentRight="true"
         android:layout_marginTop="45dp"
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#000000"
+        android:textColor="#1A334C"
         android:textSize="12dp" />
 
-</LinearLayout>
+</RelativeLayout>
