@@ -36,6 +36,7 @@ public class LoginActivity  extends Activity {
 				ThreadPolicy.Builder().permitAll().build();
 				StrictMode.setThreadPolicy(policy);
 		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.activity_login);
 	}
 	
@@ -54,13 +55,14 @@ public class LoginActivity  extends Activity {
 		
 		private String postData(String username,String password) throws ClientProtocolException, IOException {
 		    HttpClient httpclient = new DefaultHttpClient();
-		    HttpPost httppost = new HttpPost("http://"+GlobalVars.ipAddress+":8080/expense/server/login.jsp");
+		    HttpPost httppost = new HttpPost("http://"+GlobalVars.ipAddress+"/server/login.jsp");
 		    
 	        List<BasicNameValuePair> nameValuePairs = new ArrayList<BasicNameValuePair>(2);
 	        nameValuePairs.add(new BasicNameValuePair("username", username));
 	        nameValuePairs.add(new BasicNameValuePair("password", password));
 	        nameValuePairs.add(new BasicNameValuePair("mode", "sid"));
 	        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+	        
 	        HttpResponse response = httpclient.execute(httppost);
 	        
 	        BufferedReader br = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));

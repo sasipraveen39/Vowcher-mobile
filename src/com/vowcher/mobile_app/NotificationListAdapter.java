@@ -44,7 +44,7 @@ public class NotificationListAdapter extends ArrayAdapter<String> {
 			String notifMsg = notification.getString("NOTIF_MSG");
 			String timeUpdate = notification.getString("NOTIF_TIME");
 			
-			notifMsgText.setText(notifMsg);
+			notifMsgText.setText(this.values[position]);
 			timeText.setText(timeUpdate);
 			if(notifClass.equals("success")){
 				imageView.setImageResource(R.drawable.success);

@@ -24,6 +24,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -33,6 +34,7 @@ public class DashboardActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.activity_dashboard);
 		
 		TextView welcomeText = (TextView)findViewById(R.id.welcomeText);
@@ -50,7 +52,6 @@ public class DashboardActivity extends Activity {
 				JSONObject obj = json_arr.getJSONObject(i);
 				notifMsgs[i] = obj.getString("NOTIF_MSG");
 			}
-			
 			ListView list = (ListView)findViewById(R.id.notifList);
 			NotificationListAdapter adapter = new NotificationListAdapter(this,notifMsgs);
 			adapter.setJSONArray(json_arr);
@@ -78,7 +79,7 @@ public class DashboardActivity extends Activity {
 		
 		private String postData() throws ClientProtocolException, IOException {
 		    HttpClient httpclient = new DefaultHttpClient();
-		    HttpPost httppost = new HttpPost("http://"+GlobalVars.ipAddress+":8080/expense/server/notification.jsp");
+		    HttpPost httppost = new HttpPost("http://"+GlobalVars.ipAddress+"/server/notification.jsp");
 		    
 	        List<BasicNameValuePair> nameValuePairs = new ArrayList<BasicNameValuePair>(2);
 	        nameValuePairs.add(new BasicNameValuePair("username", GlobalVars.userId));
@@ -122,5 +123,34 @@ public class DashboardActivity extends Activity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
 	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	  //Handle the back button
+	  if (keyCode == KeyEvent.KEYCODE_BACK) {
+	    //Ask the user if they want to quit
+	    new AlertDialog.Builder(this)
+	      .setIcon(android.R.drawable.ic_dialog_alert)
+	      .setTitle("Exit")
+	      .setMessage("Are you sure you want to leave Vowcher?")
+	      .setNegativeButton(android.R.string.cancel, null)
+	      .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+	        @Override
+	        public void onClick(DialogInterface dialog, int which){
+	        	GlobalVars.userId="";
+	        	GlobalVars.userFullName="";
+	        	GlobalVars.secureId="";
+	        	DashboardActivity.this.finish();
+	        }
+	      })
+	      .show();
+
+	    // Say that we've consumed the event
+	    return true;
+	  }
+
+	  return super.onKeyDown(keyCode, event);
+	} 
+	
 }
 

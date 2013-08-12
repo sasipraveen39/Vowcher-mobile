@@ -11,7 +11,7 @@
         android:layout_marginLeft="3dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="3dp"
-        android:src="@drawable/warning" >
+        android:src="@null" >
     </ImageView>
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_marginLeft="60dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="10dp"
-        android:text="Medium Text"
+        android:text="No notifications to be displayed"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000"
         android:textSize="16dp" />
@@ -32,7 +32,6 @@
         android:layout_height="20dp"
         android:layout_alignParentRight="true"
         android:layout_marginTop="45dp"
-        android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#1A334C"
         android:textSize="12dp" />
